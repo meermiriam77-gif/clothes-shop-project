@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clothes Shop Questionnaire</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8ffae 0%, #43c6ac 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .questionnaire {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(67,198,172,0.2);
+            padding: 32px 40px;
+            max-width: 400px;
+            width: 100%;
+        }
+        .questionnaire h2 {
+            color: #43c6ac;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin: 16px 0 6px 0;
+            color: #333;
+            font-weight: 500;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #43c6ac;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            font-size: 1em;
+            background: #f8ffae;
+            transition: border 0.2s;
+        }
+        input:focus, select:focus, textarea:focus {
+            border: 2px solid #43c6ac;
+            outline: none;
+        }
+        button {
+            background: linear-gradient(90deg, #43c6ac 0%, #f8ffae 100%);
+            color: #222;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 0;
+            width: 100%;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: linear-gradient(90deg, #f8ffae 0%, #43c6ac 100%);
+        }
+    </style>
+</head>
+<body>
+    <form class="questionnaire" action="save_questionnaire.php" method="POST">
+    <form class="questionnaire">
+        <h2>Clothes Shop Questionnaire</h2>
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+            <option value="">Select...</option>
+            <option>Female</option>
+            <option>Male</option>
+            <option>Other</option>
+            <option>Prefer not to say</option>
+        </select>
+
+        <label for="age">Age Group</label>
+        <select id="age" name="age" required>
+            <option value="">Select...</option>
+            <option>Under 18</option>
+            <option>18-25</option>
+            <option>26-40</option>
+            <option>41-60</option>
+            <option>60+</option>
+        </select>
+
+        <label for="style">Preferred Clothing Style</label>
+        <select id="style" name="style" required>
+            <option value="">Select...</option>
+            <option>Casual</option>
+            <option>Formal</option>
+            <option>Sportswear</option>
+            <option>Traditional</option>
+            <option>Trendy</option>
+        </select>
+
+        <label for="color">Favorite Color</label>
+        <input type="text" id="color" name="color">
+
+        <label for="feedback">Any Suggestions?</label>
+        <textarea id="feedback" name="feedback" rows="3"></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
